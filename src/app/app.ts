@@ -67,9 +67,9 @@ export class App implements OnInit,OnDestroy {
     const links = {
       linkedin: 'https://linkedin.com',
       github: 'https://github.com',
-      twitter: 'https://twitter.com',
-      youtube: 'https://youtube.com',
-      instagram: 'https://instagram.com'
+      // twitter: 'https://twitter.com',
+      // youtube: 'https://youtube.com',
+      // instagram: 'https://instagram.com'
     };
     
     window.open(links[platform as keyof typeof links], '_blank');

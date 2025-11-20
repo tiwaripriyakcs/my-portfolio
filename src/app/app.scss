@@ -8,6 +8,9 @@ $text-muted: #a1a1aa;
 $accent-cyan: #06b6d4;
 $accent-purple: #7c3aed;
 
+.name-text{
+  color:#deb2b2;
+}
 // Global Styles
 .portfolio-container {
   background: $dark-bg;
@@ -216,9 +219,9 @@ $accent-purple: #7c3aed;
   .social-btn {
     width: 50px;
     height: 50px;
-    border: 2px solid $primary-red;
+    border: 2px solid white;
     border-radius: 50%;
-    color: $primary-red;
+    color: white;
     background: transparent;
     transition: all 0.3s ease;
     display: flex;
@@ -226,10 +229,10 @@ $accent-purple: #7c3aed;
     justify-content: center;
     
     &:hover {
-      background: $primary-red;
+      background: $secondary-blue;
       color: white;
       transform: translateY(-3px) scale(1.1);
-      box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+      box-shadow: 0 10px 25px $secondary-blue;
     }
     
     i {
@@ -398,9 +401,9 @@ $accent-purple: #7c3aed;
   gap: 1rem;
   
   .skill-tag {
-    background: rgba(220, 38, 38, 0.1);
-    border: 1px solid rgba(220, 38, 38, 0.3);
-    color: $primary-red;
+    background: white;
+    border: 1px solid white;
+    color: blue;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -408,9 +411,9 @@ $accent-purple: #7c3aed;
     transition: all 0.3s ease;
     
     &:hover {
-      background: rgba(220, 38, 38, 0.2);
+      background: white;
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(220, 38, 38, 0.2);
+      box-shadow: 0 5px 15px white;
     }
   }
 }
