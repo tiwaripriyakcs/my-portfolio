@@ -254,7 +254,52 @@
         </div>
 
         <!-- Right Side Contact Form -->
-        <div class="col-lg-6">
+
+<div class="col-lg-6">
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="contact-form">
+
+    <div class="mb-3">
+      <input 
+        type="text"
+        formControlName="name"
+        class="form-control bg-dark text-white border-secondary"
+        placeholder="Your Name">
+      <div class="text-danger small" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+        Name is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input 
+        type="email"
+        formControlName="email"
+        class="form-control bg-dark text-white border-secondary"
+        placeholder="Your Email">
+      <div class="text-danger small" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+        Valid email is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <textarea 
+        rows="5"
+        formControlName="message"
+        class="form-control bg-dark text-white border-secondary"
+        placeholder="Your Message"></textarea>
+      <div class="text-danger small" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+        Message is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-info w-100 text-white">
+      <i class="fas fa-paper-plane me-2"></i> Send Message
+    </button>
+
+  </form>
+</div>
+
+
+        <!-- <div class="col-lg-6">
           <form class="contact-form">
             <div class="mb-3">
               <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Your Name"
@@ -272,7 +317,7 @@
               <i class="fas fa-paper-plane me-2"></i>Send Message
             </button>
           </form>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>

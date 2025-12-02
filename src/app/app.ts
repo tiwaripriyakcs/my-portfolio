@@ -1,22 +1,31 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App implements OnInit,OnDestroy {
+  contactForm!: FormGroup;
   protected readonly title = signal('Priya Portfoli');
 
 
-
+constructor(private fb: FormBuilder) {}
 
   private animationId: number = 0;
   
   ngOnInit() {
     this.initializeAnimations();
+        this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required]
+    });
   }
   
   ngOnDestroy() {
@@ -74,5 +83,28 @@ export class App implements OnInit,OnDestroy {
     
     window.open(links[platform as keyof typeof links], '_blank');
   }
+
+ sendEmail() {
+    if (this.contactForm.invalid) {
+      return;
+    }
+
+    emailjs.send(
+      'service_nj44xwq',        // ✔ your service id
+      'template_q7bec1v',      // ✔ your template id
+      this.contactForm.value,  // form data
+      'Z5-0QIXhvTjbQjBVl'      // ✔ your public key
+    )
+    .then((response) => {
+      console.log("Email sent!", response);
+      alert("Message sent successfully!");
+      this.contactForm.reset();
+    })
+    .catch((error) => {
+      console.error("Email :", error);
+      alert("Failed to send message!");
+    });
+  }
+
   
 }
