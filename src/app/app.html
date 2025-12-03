@@ -3,9 +3,6 @@
     <div class="container-fluid px-4">
       <a class="navbar-brand name-text" href="#">Priya Tiwari</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
@@ -48,7 +45,9 @@
         <div class="col-lg-6 hero-content">
           <div class="text-content">
             <h1 class="hero-greeting">Hey, I am <span class="typewriter name-text">Priya Tiwari</span></h1>
-            <h2 class="hero-title">I am a Software Developer (Angular Developer)</h2>
+            <h2 class="hero-title">I am a Software Developer <br>
+              <span class="hero-title-Data">(Angular Developer)</span>
+            </h2>
 
             <div class="social-links mt-4">
               <button class="btn social-btn" (click)="openSocialLink('linkedin')">
@@ -68,10 +67,14 @@
         <div class="col-lg-6 d-flex justify-content-center align-items-center">
           <div class="ai-visual">
             <div class="robot-head">
+              <img src="favicon.jpg" class="profile-img" alt="Priya Tiwari"
+                onerror="this.onerror=null; this.src='assets/dummy.png';" />
+
               <div class="face-glow"></div>
               <div class="neural-connections"></div>
               <div class="data-stream"></div>
             </div>
+
           </div>
         </div>
       </div>
@@ -90,7 +93,7 @@
         <div class="col-lg-8 mx-auto">
           <div class="about-content text-center">
             <div class="profile-image-container mb-4">
-              <img src="/priya.png" alt="Priya Tiwari - Software Developer" class="profile-image"
+              <img src="priya.png" alt="Priya Tiwari - Software Developer" class="profile-image"
                 onerror="this.onerror=null; this.src='assets/dummy.png';" />
 
               <div class="image-border"></div>
@@ -112,7 +115,7 @@
     </div>
   </section>
   <section id="Skills" class="section-padding">
-    <div class="skills-section my-5" id="skillsSection">
+    <div class="skills-section " id="skillsSection">
       <h3 class="skills-title mb-6">MY SKILLS</h3>
       <div class="skills-grid">
         <div class="skill-card animated-char">
@@ -122,6 +125,21 @@
           <h5 class="skill-name">ANGULAR</h5>
           <p class="skill-description">Building dynamic, scalable web applications with Angular framework and
             TypeScript.</p>
+        </div>
+        <div class="skill-card animated-char">
+          <div class="skill-icon-wrapper">
+            <i class="fab fa-node"></i>
+          </div>
+          <h5 class="skill-name">NUXT.JS</h5>
+          <p class="skill-description">Building server-side rendered Vue applications with Nuxt.js framework.</p>
+        </div>
+        <div class="skill-card animated-char">
+          <div class="skill-icon-wrapper">
+            <i class="fas fa-code"></i>
+          </div>
+          <h5 class="skill-name">TYPESCRIPT</h5>
+          <p class="skill-description">Writing type-safe, maintainable code with TypeScript for large-scale
+            applications.</p>
         </div>
         <div class="skill-card animated-char">
           <div class="skill-icon-wrapper">
@@ -144,21 +162,6 @@
           </div>
           <h5 class="skill-name">HTML</h5>
           <p class="skill-description">Crafting semantic, accessible HTML5 markup for optimal user experience.</p>
-        </div>
-        <div class="skill-card animated-char">
-          <div class="skill-icon-wrapper">
-            <i class="fab fa-node"></i>
-          </div>
-          <h5 class="skill-name">NUXT.JS</h5>
-          <p class="skill-description">Building server-side rendered Vue applications with Nuxt.js framework.</p>
-        </div>
-        <div class="skill-card animated-char">
-          <div class="skill-icon-wrapper">
-            <i class="fas fa-code"></i>
-          </div>
-          <h5 class="skill-name">TYPESCRIPT</h5>
-          <p class="skill-description">Writing type-safe, maintainable code with TypeScript for large-scale
-            applications.</p>
         </div>
       </div>
     </div>
@@ -198,7 +201,7 @@
     <div class="container">
       <h2 class="section-title text-center">My Work</h2>
       <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="portfolio-item">
             <h5>Service Marketplace (10/2023 - 05/2025)</h5>
             <p>Designed and implemented fully responsive user interfaces that function seamlessly across a wide range of
@@ -208,30 +211,29 @@
               standards.<br><strong>Tech Stack:</strong> TypeScript, Tailwind CSS, Angular 16</p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="portfolio-item">
             <h5>Health-Link (May 2024 – May 2025)</h5>
             <p>Built responsive and dynamic user interfaces with seamless API integration. Developed reusable components
-              and custom directives to implement complex UI functionality. Contributed to three sub-projects under the
-              Health-Link umbrella:<br>
+              and custom directives to implement complex UI functionality.<br>
             <ul>
               <li><strong>Pharma Website:</strong> Created fully responsive static screens using Nuxt.js and Tailwind
                 CSS.</li>
               <li><strong>Food Website:</strong> Developed an e-commerce platform using Angular, TypeScript, and
                 Tailwind CSS.</li>
             </ul>
-            <strong>Tech Stack:</strong>
-            <p> Nuxt.js, TypeScript, NocoDB, Tailwind CSS</p>
+
+            <p> <strong>Tech Stack:</strong> Nuxt.js, TypeScript, NocoDB, Tailwind CSS</p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="portfolio-item">
             <h5>QH - Malware Visual Design (03/2024 - 10/2024)</h5>
             <p>Pixel-perfect Figma-to-Angular UI implementation, data visualizations via AMCharts 5, and real-time API
               integration.<br><strong>Tech Stack:</strong> Angular 18, Bootstrap, TypeScript, HTML5</p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="portfolio-item">
             <h5>Lyca Mobile and Lyca Belgium (July 2023 – December 2023)</h5>
             <p>Developed and enhanced responsive UIs with dynamic functionalities. Implemented routing and observables
@@ -239,14 +241,14 @@
               development.<br><strong>Tech Stack:</strong> Angular, Bootstrap, Angular Material, TypeScript, SCSS</p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="portfolio-item">
             <h5>Dynamide (February 2023 – March 2023)</h5>
             <p>Delivered responsive and interactive user interfaces using Angular and modern CSS practices for an
               engaging user experience.<br><strong>Tech Stack:</strong> TypeScript, Tailwind CSS, Angular</p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="portfolio-item">
             <h5>Thrymr OS2 (August 2022 – March 2024)</h5>
             <p>Developed a responsive and user-friendly product UI featuring interactive charts using Apex Charts.
@@ -270,11 +272,6 @@
             <p><i class="fas fa-phone text-info me-2"></i> +91 6388758773</p>
             <p><i class="fas fa-envelope text-info me-2"></i> tiwaripriya2510@gmail.com</p>
             <p><i class="fas fa-map-marker-alt text-info me-2"></i> Lucknow, UP, India</p>
-            <div class="mt-3">
-              <a href="#" class="text-info fs-4 me-3"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="text-info fs-4 me-3"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="text-info fs-4"><i class="fab fa-linkedin"></i></a>
-            </div>
           </div>
         </div>
 

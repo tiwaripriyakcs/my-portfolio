@@ -2,18 +2,24 @@
 $primary-teal: #39A7A6; // Primary Teal (Color 3 from image)
 $secondary-light-teal: #6AD4C7; // Secondary Light Teal (Color 2 from image)
 $accent-dark-gray: #343537; // Dark Accent (Color 4 from image) - Used for Text
-
 $secondary-blue: #1e40af; // Kept, but mostly unused now
 // NEW LIGHT THEME COLORS
 $light-bg: #EFECEC; // Light Gray (Replaces $dark-bg)
 $lighter-bg: #FFFFFF; // Pure White (Replaces $darker-bg)
 $text-dark: $accent-dark-gray; // Dark Slate Gray (Replaces $text-light)
 $text-muted-dark: #52525B; // Muted dark gray for contrast (Replaces $text-muted white)
-
 $accent-purple: #7c3aed; // Kept for gradient contrast
+// BREAKPOINT VARIABLES
+$break-xl: 1450px;
+$break-lg: 1200px;
+$break-md: 992px;
+$break-sm: 768px;
+$break-xs: 576px;
+
 
 .name-text {
   color: $primary-teal;
+  font-weight: 800;
 }
 
 // Global Styles
@@ -108,6 +114,14 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
   .hero-title {
     font-size: 2.5rem;
     font-weight: 400;
+    color: $text-muted-dark; // UPDATED: Changed from $text-muted (light)
+    margin-bottom: 2rem;
+    line-height: 3.5rem;
+  }
+
+  .hero-title-Data {
+    font-size: 2.5rem;
+    font-weight: 800;
     color: $text-muted-dark; // UPDATED: Changed from $text-muted (light)
     margin-bottom: 2rem;
   }
@@ -281,6 +295,9 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
   }
 }
 
+
+
+
 // Action Buttons
 .cta-btn {
   padding: 0.75rem 2rem;
@@ -362,6 +379,17 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
       border-radius: 50%;
       opacity: 0.6;
       animation: float 4s ease-in-out infinite reverse;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 20px; // follow card corners
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; // behind effects
     }
   }
 }
@@ -512,13 +540,15 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
     background-position: 0% 50%;
   }
 }
+
 .bg-light {
   background: $lighter-bg; // UPDATED: Changed from $darker-bg to lighter-bg
-  color:#343537;
+  color: #343537;
 }
+
 .bg-dark-alt {
   background: $lighter-bg; // UPDATED: Changed from $darker-bg to lighter-bg
-  color:#343537;
+  color: #343537;
 }
 
 .section-title {
@@ -527,6 +557,7 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
   margin-bottom: 3rem;
   position: relative;
   color: $text-dark; // Ensure title is dark
+  padding-top: 8px;
 
   &::after {
     content: '';
@@ -750,6 +781,7 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
 
   .section-title {
     font-size: 2rem;
+    padding-top: 16px;
   }
 
   .ai-visual {
@@ -764,7 +796,7 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
 
 // SKILLS SECTION STYLING (UPDATED)
 .skills-section {
-  padding: 2rem 0;
+  padding: 10px 0px;
 
   .skills-title {
     text-align: center;
@@ -792,6 +824,7 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0px 20px;
   }
 
   .skill-card {
@@ -828,7 +861,7 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
 
       .skill-icon-wrapper {
         transform: scale(1.1) rotateY(360deg);
-        background: linear-gradient(135deg, $primary-teal, $secondary-light-teal);
+        background: linear-gradient(135deg, $lighter-bg, $lighter-bg);
         box-shadow: 0 10px 30px rgba(57, 167, 166, 0.5);
       }
     }
@@ -899,4 +932,79 @@ $accent-purple: #7c3aed; // Kept for gradient contrast
     transform: rotateY(360deg) scale(1.1);
     background: rgba(106, 212, 199, 0.15); // UPDATED
   }
+}
+
+@media (max-width: $break-sm) {
+  .social-links {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-visual {
+    display: none;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .bg-light {
+    padding-top: 25px;
+  }
+
+
+}
+
+@media (max-width: $break-md) {
+
+  .portfolio-item {
+
+    height: auto;
+
+    p {
+      font-size: 14px;
+
+    }
+
+
+  }
+
+  .hero-greeting {
+    font-size: 2.9rem;
+  }
+
+
+}
+
+@media (max-width: $break-lg) {
+  .hero-section {
+
+    .hero-title {
+      .hero-title-Data {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+    }
+  }
+
+  // Portfolio Items
+  .portfolio-item {
+    ul {
+      li {
+        font-size: 14px; // <--- This applies the 14px font size
+      }
+
+      strong {
+        font-size: 14px; // Set explicitly to ensure it matches or slightly larger/smaller
+      }
+    }
+
+    p {
+      font-size: 14px;
+      // ...
+    }
+  }
+
+
+
 }

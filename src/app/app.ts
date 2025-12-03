@@ -175,8 +175,8 @@ export class App implements OnInit, OnDestroy {
   
   openSocialLink(platform: string) {
     const links: { [key: string]: string } = {
-      linkedin: 'https://www.linkedin.com/in/priya-tiwari-your-profile',
-      github: 'https://github.com/your-username',
+      linkedin: 'https://www.linkedin.com/in/priya2510',
+      github: 'https://github.com/tiwaripriyakcs',
     };
     
     const url = links[platform];
